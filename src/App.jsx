@@ -6,7 +6,14 @@ const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Layout>{/* <Home /> */}</Layout>} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
       </Routes>
     </div>
   );

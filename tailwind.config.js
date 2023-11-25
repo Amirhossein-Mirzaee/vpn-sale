@@ -9,8 +9,11 @@ export default {
       fontFamily: {
         sans: ["Rubik"],
       },
+      backgroundColor: {
+        primaryShadowColor: "rgba(13, 16, 37, 0.6)",
+        customshadow: "rgba(245, 56, 56, 0.35)", // #F53838 with 35% opacity
+      },
       colors: {
-        shadowColor: "#0D1025",
         textColor: "#0B132A",
         secTextColor: "#4F5665",
         btnColor: "#F53838",
