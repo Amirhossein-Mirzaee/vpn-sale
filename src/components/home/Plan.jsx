@@ -1,8 +1,9 @@
-import freePng from "../../assets/png/Free.png";
-import standardPng from "../../assets/png/Standard.png";
-import premiumPng from "../../assets/png/Premium.png";
+import freePng from "/png/Free.png";
+import standardPng from "/png/Standard.png";
+import premiumPng from "/png/Premium.png";
 import { planTitles } from "../../assets/data/planTitle";
 import { JamCheck } from "../../assets/icons/icons";
+import SecCustomBtn from "../../common/SecCustomBtn";
 
 const Plan = () => {
   return (
@@ -31,7 +32,7 @@ const Plan = () => {
             ))}
           </ul>
           <p>Free</p>
-          <button>Select</button>
+          <SecCustomBtn>Select</SecCustomBtn>
         </div>
         <div className="flex flex-col items-center border-[#DDDDDD] border-2 p-20  gap-9">
           <div className="max-w-[154.9px]">
@@ -51,7 +52,7 @@ const Plan = () => {
           <p>
             $9 / <span>mo</span>
           </p>
-          <button>Select</button>
+          <SecCustomBtn>Select</SecCustomBtn>
         </div>
         <div className="flex flex-col items-center border-[#DDDDDD] border-2 p-20  gap-9">
           <div className="max-w-[154.9px]">
@@ -71,7 +72,7 @@ const Plan = () => {
           <p>
             $12 / <span>mo</span>
           </p>
-          <button>Select</button>
+          <SecCustomBtn>Select</SecCustomBtn>
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import vec from "../../assets/png/vec.png";
+import vec from "/png/vec.png";
 const Hero = () => {
   return (
     <div className="flex items-stretch justify-center flex-row-reverse ">

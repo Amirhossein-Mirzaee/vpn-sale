@@ -3,6 +3,9 @@ import Hero from "../components/home/Hero";
 import Statistics from "../components/home/Statistics";
 import Features from "../components/home/Features";
 import Plan from "../components/home/Plan";
+import Map from "../components/home/Map";
+import Slider from "../components/home/Slider";
+// import api from "../components/api";
 
 const Home = () => {
   return (
@@ -11,6 +14,8 @@ const Home = () => {
       <Statistics />
       <Features />
       <Plan />
+      <Map />
+      <Slider />
     </div>
   );
 };

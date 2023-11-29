@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { NavLinks } from "../../assets/data/NavLinks";
 import { LogoIcon } from "../../assets/icons/icons";
+import FirstCustomBtn from "../../common/CustomBtn";
 const Header = () => {
   return (
     <>
@@ -11,11 +12,9 @@ const Header = () => {
             <Link key={item.id}>{item.title}</Link>
           ))}
         </ul>
-        <div className="flex gap-12 items-center text-small font-semibold">
-          <button className=" py-1 rounded-full text-textColor ">Sign In</button>
-          <button className=" outline-none border border-btnColor px-6 py-1 rounded-full text-btnColor">
-            Sign Up
-          </button>
+        <div className="flex gap-4 items-center text-small font-semibold">
+          <FirstCustomBtn>Sign In</FirstCustomBtn>
+          <FirstCustomBtn>Sign Up</FirstCustomBtn>
         </div>
       </div>
     </>
