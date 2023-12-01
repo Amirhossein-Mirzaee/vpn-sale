@@ -14,7 +14,7 @@ const Map = () => {
           easier for you when you move locations.
         </p>
       </div>
-      <div className="max-w-[1060px] mx-auto py-28 bg-white/100">
+      <div className="max-w-[1060px] mx-auto py-28 ">
         <GlobalIcon/>
       </div>
       <div id="icons" className="flex items-center justify-center gap-20">

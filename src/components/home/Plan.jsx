@@ -31,7 +31,7 @@ const Plan = () => {
               </li>
             ))}
           </ul>
-          <p>Free</p>
+          <p className="font-semibold text-[25px]">Free</p>
           <SecCustomBtn>Select</SecCustomBtn>
         </div>
         <div className="flex flex-col items-center border-[#DDDDDD] border-2 p-20  gap-9">
@@ -49,8 +49,8 @@ const Plan = () => {
               </li>
             ))}
           </ul>
-          <p>
-            $9 / <span>mo</span>
+          <p className="font-semibold text-[25px]">
+            $9  <span className="font-light">/ mo</span>
           </p>
           <SecCustomBtn>Select</SecCustomBtn>
         </div>
@@ -69,8 +69,8 @@ const Plan = () => {
               </li>
             ))}
           </ul>
-          <p>
-            $12 / <span>mo</span>
+          <p className="font-semibold text-[25px]">
+            $12  <span className="font-light"> / mo</span>
           </p>
           <SecCustomBtn>Select</SecCustomBtn>
         </div>

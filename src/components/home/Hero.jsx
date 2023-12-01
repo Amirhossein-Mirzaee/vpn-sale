@@ -7,15 +7,12 @@ const Hero = () => {
       </div>
       <div className="flex flex-col items-start ">
         <div className=" text-start">
-          <p className="text-[50px] font-semibold">Want anything to be </p>
-          <p className="text-[50px] font-semibold">
-            be easy with
-            <span className="font-bold">LaslesVPN.</span>
-          </p>
+          <p className="text-[50px] font-semibold max-w-[555px]">Want anything to be easy with
+            <span className="font-bold">LaslesVPN.</span></p>
         </div>
-        <p className="text-[16px] text-secTextColor text-start font-light  gap-1 flex flex-col ">
-          Provide a network for all your needs with ease and fun using{" "}
-          <span> LaslesVPN discover interesting features from us.</span>
+        <p className="text-[16px] text-secTextColor text-start font-light max-w-[555px]">
+          Provide a network for all your needs with ease and fun using
+          <span className="font-semibold"> LaslesVPN</span> discover interesting features from us.
         </p>
         <div className="bg-btnColor px-24 py-6 my-24 text-white font-bold rounded-lg hover:bg-secTextColor transition-all duration-300 cursor-pointer">
           <button>Get Started</button>
