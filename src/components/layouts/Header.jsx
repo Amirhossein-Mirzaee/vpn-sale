@@ -1,21 +1,32 @@
-import { Link } from "react-router-dom";
 import { NavLinks } from "../../assets/data/NavLinks";
 import { LogoIcon } from "../../assets/icons/icons";
-import FirstCustomBtn from "../../common/CustomBtn";
+import FirstCustomBtn from "../common/CustomBtn";
+import { NavLink } from "react-router-dom";
+import { Link as Kinder } from "react-scroll";
+import Menu from "../utils/HamburgerMenu";
+
 const Header = () => {
   return (
     <>
-      <div className="flex justify-around py-5 font-light">
-        <LogoIcon />
-        <ul className="flex items-center justify-center gap-6 text-secTextColor text-small">
+      <div className="flex md:justify-around xs:justify-between py-5 font-light xs:px-3 md:px-0 items-start">
+        <NavLink to="/">
+          <LogoIcon />
+        </NavLink>
+        <ul className="lg:flex items-center justify-center gap-6 text-secTextColor text-small relative xs:hidden ">
           {NavLinks.map((item) => (
-            <Link key={item.id}>{item.title}</Link>
+            <NavLink className="" key={item.id}>
+              <span className="absolute bottom-0 left-0 w-0 bg-blue-500 border-b-2 border-blue-500 duration-500 transform origin-bottom-left group-hover:w-full"></span>
+              <Kinder to={item.link} smooth={true} offset={-60} duration={500}>
+                {item.title}
+              </Kinder>
+            </NavLink>
           ))}
         </ul>
-        <div className="flex gap-4 items-center text-small font-semibold">
+        <div className="md:flex lg:gap-4 md:gap-1 text-small xs:hidden">
           <FirstCustomBtn>Sign In</FirstCustomBtn>
           <FirstCustomBtn>Sign Up</FirstCustomBtn>
         </div>
+          <Menu />
       </div>
     </>
   );
