@@ -15,7 +15,7 @@ const Footer = () => {
           <div>
             <LogoIcon />
           </div>
-          <p className="max-w-[340px] text-secTextColor text-[16px] ">
+          <p className="max-w-[340px] text-secTextColor text-[16px] xs:text-center lg:text-start ">
             <span className="font-semibold">LaslesVPN</span> is a private virtual network
             that has unique features and has high security.
           </p>
