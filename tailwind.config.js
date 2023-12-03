@@ -7,7 +7,7 @@ export default {
         xs: "330px",
       },
       fontFamily: {
-        sans: ["Rubik"],
+        sans: ["Poppins", "sans-serif"],
       },
       backgroundColor: {
         primaryShadowColor: "rgba(13, 16, 37, 0.6)",

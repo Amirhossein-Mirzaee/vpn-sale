@@ -1,10 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from "react";
+import React, { useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { StarIcon } from "../../assets/icons/icons";
 
 const Slider = () => {
+  // const [open, setOpen] = useState(false);
   return (
     <main
       id="slider"
@@ -30,7 +31,10 @@ const Slider = () => {
           {new Array(12).fill("").map((item, index) => {
             return (
               <SwiperSlide key={index} className="cursor-pointer xs:py-8">
-                <div className="rounded-[10px] lg:border-2 xs:border border-secTextColor hover:border-btnColor transition-all duration-300 p-6 xs:max-h-[250px] md:max-h-full">
+                <div
+                  // onClick={setOpen(!open)}
+                  className="rounded-[10px] lg:border-2 xs:border border-secTextColor hover:border-btnColor transition-all duration-300 p-6 xs:max-h-[250px] md:max-h-full"
+                >
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex items-center justify-start gap-4">
                       <div className="relative h-12 w-12  rounded-full overflow-hidden">

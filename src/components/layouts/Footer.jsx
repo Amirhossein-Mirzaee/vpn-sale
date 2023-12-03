@@ -10,12 +10,12 @@ import {
 const Footer = () => {
   return (
     <div id="footer" className="mt-16 py-16">
-      <div className="flex items-stretch justify-around px-8">
-        <div className="flex flex-col items-start justify-stretch gap-6">
+      <div className="flex lg:items-stretch xs:items-center lg:justify-around xs:justify-center px-8">
+        <div className="flex flex-col lg:items-start lg:justify-stretch gap-6 xs:items-center xs:justify-center ">
           <div>
             <LogoIcon />
           </div>
-          <p className="max-w-[340px] text-secTextColor text-[16px]">
+          <p className="max-w-[340px] text-secTextColor text-[16px] ">
             <span className="font-semibold">LaslesVPN</span> is a private virtual network
             that has unique features and has high security.
           </p>
@@ -35,7 +35,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="flex items-stretch gap-24">
-          <ul className="flex flex-col text-left font-semibold gap-3.5">
+          <ul className=" flex-col text-left font-semibold gap-3.5 xs:hidden lg:flex">
             <p className="text-[18px]">Products</p>
             {products.map((p) => (
               <Link className="font-light text-secTextColor " key={p.id}>
@@ -43,7 +43,7 @@ const Footer = () => {
               </Link>
             ))}
           </ul>
-          <ul className="flex flex-col text-left font-semibold gap-3.5">
+          <ul className="lg:flex flex-col text-left font-semibold gap-3.5 xs:hidden">
             <p className="text-[18px]">Engage</p>
             {engages.map((e) => (
               <Link className="font-light text-secTextColor " key={e.id}>
@@ -51,7 +51,7 @@ const Footer = () => {
               </Link>
             ))}
           </ul>
-          <ul className="flex flex-col text-left font-semibold gap-3.5">
+          <ul className="lg:flex flex-col text-left font-semibold gap-3.5 xs:hidden">
             <p className="text-[18px]">Earn Money</p>
             {money.map((m) => (
               <Link className="font-light text-secTextColor " key={m.id}>
