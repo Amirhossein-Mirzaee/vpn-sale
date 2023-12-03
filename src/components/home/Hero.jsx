@@ -1,7 +1,7 @@
 import vec from "/png/vec.webp";
 const Hero = () => {
   return (
-    <div className="flex items-stretch justify-center xs:gap-9 lg:gap-0 lg:flex-row-reverse flex-col xs:mt-16 xs:items-center lg:items-start lg:px-4 ">
+    <div className="flex items-stretch justify-around xs:gap-9 lg:gap-0 lg:flex-row-reverse flex-col xs:mt-16 xs:items-center lg:items-start lg:px-4 ">
       <div className="lg:max-w-[600px] md:max-w-[600px] xs:max-w-[380px] sm:max-w-[560px] xs:mx-auto  lg:mx-0 ">
         <img src={vec} alt="escf" className="w-full" />
       </div>
@@ -17,7 +17,7 @@ const Hero = () => {
           <span className="font-semibold"> LaslesVPN</span> discover interesting features
           from us.
         </p>
-        <div className="bg-btnColor px-24 py-6 my-24 text-white font-bold rounded-lg hover:bg-secTextColor transition-all duration-300 cursor-pointer">
+        <div className="bg-btnColor px-24 py-5 my-24 text-white font-bold rounded-lg hover:bg-[#f93232] transition-all duration-300 cursor-pointer shadow-[#F53838] shadow-2xl">
           <button>Get Started</button>
         </div>
       </div>

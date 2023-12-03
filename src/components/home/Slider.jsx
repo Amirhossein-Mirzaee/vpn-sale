@@ -5,11 +5,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { StarIcon } from "../../assets/icons/icons";
 
 const Slider = () => {
-  // const [open, setOpen] = useState(false);
+  const [isActive, setIsActive] = useState(0);
+
+  const handleSlideChange = (swiper) => {
+    setIsActive(swiper.activeIndex);
+    console.log(swiper.activeIndex);
+  };
+
   return (
     <main
       id="slider"
-      className="max-w-[1300px] mx-auto mt-16 bg-gradient-to-t from-white to-[#F8F8F8] "
+      className="max-w-[1344px] mx-auto mt-16 bg-gradient-to-t from-white to-[#F8F8F8] "
     >
       <div className="xs:pb-0 md:pb-[220px] relative ">
         <div className="flex flex-col justify-center text-center items-center gap-5">
@@ -22,23 +28,35 @@ const Slider = () => {
           </p>
         </div>
 
-        <div className="slide-left py-3 px-3 my-4 text-textColor text-[16px]  xs:animate-pulse border-btnColor border-2 rounded-lg w-fit">
-          <p>
-            <em>Slide the Slider to Left </em>
-          </p>
-        </div>
-        <Swiper slidesPerView={2.9} spaceBetween={40} loop>
+        <Swiper
+          onSlideChange={handleSlideChange}
+          slidesPerView={3}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              width: 330,
+              height: 800,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 3,
+              width: 1344,
+              height: 500,
+            },
+          }}
+        >
           {new Array(12).fill("").map((item, index) => {
             return (
-              <SwiperSlide key={index} className="cursor-pointer xs:py-8">
+              <SwiperSlide key={index} className="cursor-pointer xs:py-8 lg:px-6">
                 <div
-                  // onClick={setOpen(!open)}
-                  className="rounded-[10px] lg:border-2 xs:border border-secTextColor hover:border-btnColor transition-all duration-300 p-6 xs:max-h-[250px] md:max-h-full"
+                  className={`rounded-[10px] lg:border-2 xs:border   transition-all duration-300 p-6 xs:max-h-[250px] md:max-h-full ${
+                    isActive === index ? "border-btnColor " : "border-secTextColor"
+                  }}`}
                 >
                   <div className="flex items-center justify-between gap-4">
                     <div className="flex items-center justify-start gap-4">
                       <div className="relative h-12 w-12  rounded-full overflow-hidden">
-                        <img className="w-full h-full absolute" src="/png/vec2.png" />
+                        <img className="w-full h-full absolute" src="/png/vec2.webp" />
                       </div>
                       <div className="xs:hidden md:block">
                         <p className="font-semibold text-lg text-textColor">
@@ -47,14 +65,14 @@ const Slider = () => {
                         <p className="text-secTextColor">Warsaw, Poland</p>
                       </div>
                     </div>
-                    <div className=" xs:flex-col md:flex-wrap items-center justify-end gap-2 xs:hidden sm:flex">
+                    <div className=" xs:flex-col md:flex-wrap items-center justify-end gap-2 ">
                       <span className="text-textColor">4.5</span>
                       <span>
                         <StarIcon />
                       </span>
                     </div>
                   </div>
-                  <p className="leading-9 mt-4 text-textColor xs:hidden md:block">
+                  <p className="leading-relaxed mt-4 text-textColor ">
                     “Wow... I am very happy to use this VPN, it turned out to be more than
                     my expectations and so far there have been no problems. LaslesVPN
                     always the best”.

@@ -7,7 +7,7 @@ import SecCustomBtn from "../common/SecCustomBtn";
 
 const Plan = () => {
   return (
-    <div id="plan">
+    <div id="plan" className=" ">
       <div className="flex flex-col items-center gap-6 pt-16 py-10 ">
         <p className="font-semibold text-textColor text-[35px]">Choose Your Plan</p>
         <p className="text-secTextColor font-light text-[16px] max-w-lg text-center">
@@ -15,7 +15,7 @@ const Plan = () => {
           cheerfully.
         </p>
       </div>
-      <div className="flex items-center justify-center lg:gap-36 xs:flex-col md:flex-row xs:gap-8 xs:px-4 lg:px-0">
+      <div className="flex items-center justify-center lg:gap-6 xs:flex-col lg:flex-row xs:gap-8 xs:px-4 md:px-0 lg:px-6 md:max-w-full max-w-[1444px] mx-auto">
         <div className="flex flex-col items-center border-[#DDDDDD] border-2 p-20 gap-9">
           <div className="max-w-[154.9px]">
             <img className="w-full" src={freePng} alt="" />

@@ -8,7 +8,7 @@ import Menu from "../utils/HamburgerMenu";
 const Header = () => {
   return (
     <>
-      <div className="flex md:justify-around xs:justify-between py-5 font-light xs:px-3 md:px-0 items-start">
+      <div className="flex md:justify-around xs:justify-between py-5 font-light xs:px-3 md:px-0 items-center lg:gap-16">
         <NavLink to="/">
           <LogoIcon />
         </NavLink>
