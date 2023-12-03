@@ -1,4 +1,4 @@
-import vec from "/png/vec.png";
+import vec from "/png/vec.webp";
 const Hero = () => {
   return (
     <div className="flex items-stretch justify-center xs:gap-9 lg:gap-0 lg:flex-row-reverse flex-col xs:mt-16 xs:items-center lg:items-start lg:px-4 ">

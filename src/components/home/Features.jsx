@@ -1,5 +1,5 @@
 import { TickIcon } from "../../assets/icons/icons";
-import vec2 from "/png/vec2.png";
+import vec2 from "/png/vec2.webp";
 import { titles } from "../../assets/data/featuresTitle";
 
 const Features = () => {
