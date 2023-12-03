@@ -11,6 +11,7 @@ const Slider = () => {
     setIsActive(swiper.activeIndex);
     console.log(swiper.activeIndex);
   };
+  const shadowColor = "rgba(245, 56, 56, 0.35)";
 
   return (
     <main
@@ -82,22 +83,28 @@ const Slider = () => {
             );
           })}
         </Swiper>
-        <div className="shadow-2xl w-full max-w-[1130px] md:bg-white absolute mt-16  left-1/2 transform -translate-x-1/2 xs:hidden md:block">
+        <div className="shadow-2xl w-full max-w-[1130px]  md:bg-white absolute mt-16  left-1/2 transform -translate-x-1/2 xs:hidden md:block">
           <div className="flex lg:justify-between xs:justify-center items-center px-12">
             <div className="md:flex flex-col items-start justify-center gap-5 xs:hidden">
-              <p className="text-[35px] max-w-[371px] font-semibold">
+              <p className="text-[35px] max-w-[381.61px] font-semibold">
                 Subscribe Now for Get Special Features!
               </p>
               <p className="text-[16px] text-secTextColor">
                 Let's subscribe with us and find the fun.
               </p>
             </div>
-            <div className="bg-btnColor px-24 py-6 my-24 text-white  font-semibold rounded-lg hover:bg-secTextColor transition-all duration-300 cursor-pointer">
-              <button>Subscribe</button>
+            <div
+              className={`bg-btnColor px-24 py-5 my-24 text-white font-bold rounded-lg hover:bg-[#f93232] transition-all duration-300 cursor-pointer  `}
+              style={{ boxShadow: `0 32px 59px ${shadowColor}` }}
+            >
+              <button>Get Started</button>
             </div>
           </div>
         </div>
-        <div className="bg-btnColor px-24 py-6  text-white  font-semibold rounded-lg hover:bg-secTextColor transition-all duration-300 cursor-pointer max-w-sm mx-auto text-center xs:block md:hidden">
+        <div
+          className={`bg-btnColor px-24 py-5  text-white  font-semibold rounded-lg hover:bg-[#f93232]  transition-all duration-300 cursor-pointer max-w-sm mx-auto text-center xs:block md:hidden`}
+          style={{ boxShadow: `0 32px 59px ${shadowColor}` }}
+        >
           <button>Subscribe</button>
         </div>
       </div>

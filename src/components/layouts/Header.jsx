@@ -23,8 +23,8 @@ const Header = () => {
           ))}
         </ul>
         <div className="md:flex lg:gap-4 md:gap-1 text-small xs:hidden">
-          <FirstCustomBtn>Sign In</FirstCustomBtn>
-          <FirstCustomBtn>Sign Up</FirstCustomBtn>
+          <FirstCustomBtn className={"hover:text-textColor border-none"}>Sign In</FirstCustomBtn>
+          <FirstCustomBtn className={"border border-btnColor text-btnColor"}>Sign Up</FirstCustomBtn>
         </div>
           <Menu />
       </div>

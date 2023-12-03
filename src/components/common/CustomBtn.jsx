@@ -1,6 +1,8 @@
-const FirstCustomBtn = ({ children }) => {
+const FirstCustomBtn = ({ children, className }) => {
   return (
-    <button className=" py-1 rounded-full text-textColor font-light  hover:text-btnColor border border-transparent hover:border-btnColor lg:px-9 md:px-5 transition-all duration-200">
+    <button
+      className={`${className} py-1 rounded-full  lg:w-[150px] lg:h-[45px] md:px-5 transition-all duration-200 font-semibold` }
+    >
       {children}
     </button>
   );

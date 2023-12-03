@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <div id="footer" className="mt-16 py-16">
+    <div id="footer" className="mt-32 py-16">
       <div className="flex lg:items-stretch xs:items-center lg:justify-around xs:justify-center px-8">
         <div className="flex flex-col lg:items-start lg:justify-stretch gap-6 xs:items-center xs:justify-center ">
           <div>

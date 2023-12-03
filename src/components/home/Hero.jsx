@@ -1,5 +1,6 @@
 import vec from "/png/vec.webp";
 const Hero = () => {
+  const shadowColor = "rgba(245, 56, 56, 0.35)";
   return (
     <div className="flex items-stretch justify-around xs:gap-9 lg:gap-0 lg:flex-row-reverse flex-col xs:mt-16 xs:items-center lg:items-start lg:px-4 ">
       <div className="lg:max-w-[600px] md:max-w-[600px] xs:max-w-[380px] sm:max-w-[560px] xs:mx-auto  lg:mx-0 ">
@@ -9,7 +10,7 @@ const Hero = () => {
         <div className=" md:text-start xs:text-center">
           <p className="md:text-[50px] xs:text-[26px] font-semibold max-w-[555px]">
             Want anything to be easy with
-            <span className="font-bold">LaslesVPN.</span>
+            <span className="font-bold"> LaslesVPN.</span>
           </p>
         </div>
         <p className="text-[16px] text-secTextColor md:text-start xs:text-center font-light max-w-[555px]">
@@ -17,7 +18,10 @@ const Hero = () => {
           <span className="font-semibold"> LaslesVPN</span> discover interesting features
           from us.
         </p>
-        <div className="bg-btnColor px-24 py-5 my-24 text-white font-bold rounded-lg hover:bg-[#f93232] transition-all duration-300 cursor-pointer shadow-[#F53838] shadow-2xl">
+        <div
+          className={`bg-btnColor px-24 py-5 my-24 text-white font-bold rounded-lg hover:bg-[#f93232] transition-all duration-300 cursor-pointer  `}
+          style={{ boxShadow: `0 32px 59px ${shadowColor}` }}
+        >
           <button>Get Started</button>
         </div>
       </div>
