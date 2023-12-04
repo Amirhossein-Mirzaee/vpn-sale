@@ -48,7 +48,7 @@ const Slider = () => {
         >
           {new Array(12).fill("").map((item, index) => {
             return (
-              <SwiperSlide key={index} className="cursor-pointer xs:py-8 lg:px-6">
+              <SwiperSlide key={index} className="cursor-pointer xs:py-8 lg:px-6 xs:px-4">
                 <div
                   className={`rounded-[10px] lg:border-2 xs:border   transition-all duration-300 p-6 xs:max-h-[250px] md:max-h-full ${
                     isActive === index ? "border-btnColor " : "border-secTextColor"
@@ -101,11 +101,13 @@ const Slider = () => {
             </div>
           </div>
         </div>
-        <div
-          className={`bg-btnColor px-24 py-5  text-white  font-semibold rounded-lg hover:bg-[#f93232]  transition-all duration-300 cursor-pointer max-w-sm mx-auto text-center xs:block md:hidden`}
-          style={{ boxShadow: `0 32px 59px ${shadowColor}` }}
-        >
-          <button>Subscribe</button>
+        <div className="xs:px-4">
+          <div
+            className={`bg-btnColor px-24 py-5  text-white  font-semibold rounded-lg hover:bg-[#f93232]  transition-all duration-300 cursor-pointer max-w-sm mx-auto text-center xs:block md:hidden`}
+            style={{ boxShadow: `0 32px 59px ${shadowColor}` }}
+          >
+            <button>Subscribe</button>
+          </div>
         </div>
       </div>
     </main>
