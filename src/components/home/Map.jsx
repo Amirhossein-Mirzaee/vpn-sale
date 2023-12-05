@@ -14,12 +14,12 @@ const Map = () => {
         </p>
       </div>
       <div className="flex flex-col ">
-        <div className="lg:max-w-[1060px] xs:max-w-full  mx-auto py-28 ">
+        <div className="lg:max-w-[1060px] xs:max-w-full  mx-auto  ">
           <GlobalIcon />
         </div>
         <div
           id="icons"
-          className=" grid lg:grid-cols-5 md:grid-cols-3  xs:grid-cols-2 items-center justify-items-center gap-20 px-4"
+          className=" grid lg:grid-cols-5 md:grid-cols-3  xs:grid-cols-2 items-center justify-items-center gap-x-20 gap-y-5 px-6 pb-12"
         >
           {companyIcons.map((item) => (
             <div key={item.id} className="max-w-[200px]">

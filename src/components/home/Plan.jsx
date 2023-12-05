@@ -6,10 +6,9 @@ import { JamCheck } from "../../assets/icons/icons";
 import SecCustomBtn from "../common/SecCustomBtn";
 
 const Plan = () => {
-  const shadowColor = "rgba(245, 56, 56, 0.35)";
 
   return (
-    <div id="plan" className=" ">
+    <div id="plan" className=" xs:px-6">
       <div className="flex flex-col items-center gap-6 pt-16 py-10 ">
         <p className="font-semibold text-textColor text-[35px]">Choose Your Plan</p>
         <p className="text-secTextColor font-light text-[16px] max-w-lg text-center">

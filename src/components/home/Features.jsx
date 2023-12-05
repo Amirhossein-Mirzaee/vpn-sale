@@ -4,7 +4,7 @@ import { titles } from "../../assets/data/featuresTitle";
 
 const Features = () => {
   return (
-    <div id="features" className="flex flex-col xs:mt-16">
+    <div id="features" className="flex flex-col xs:mt-16 xs:px-6">
       <div className="text-[35px] text-center xs:block lg:hidden font-semibold">
         <p>We Provide Many </p>
         <p>Features You Can Use</p>

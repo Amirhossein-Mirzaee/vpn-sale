@@ -9,14 +9,13 @@ const Slider = () => {
 
   const handleSlideChange = (swiper) => {
     setIsActive(swiper.activeIndex);
-    console.log(swiper.activeIndex);
   };
   const shadowColor = "rgba(245, 56, 56, 0.35)";
 
   return (
     <main
       id="slider"
-      className="max-w-[1344px] mx-auto mt-16 bg-gradient-to-t from-white to-[#F8F8F8] "
+      className="max-w-[1344px] mx-auto mt-16 bg-gradient-to-t from-white to-[#F8F8F8] px-6"
     >
       <div className="xs:pb-0 md:pb-[220px] relative ">
         <div className="flex flex-col justify-center text-center items-center gap-5">
@@ -37,7 +36,6 @@ const Slider = () => {
               slidesPerView: 1,
               width: 330,
               height: 800,
-              spaceBetween: 15,
             },
             768: {
               slidesPerView: 3,
