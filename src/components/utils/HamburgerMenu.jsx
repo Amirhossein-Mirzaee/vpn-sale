@@ -17,7 +17,7 @@ const Menu = () => {
       </button>
 
       <div
-        className={`fixed right-0 inset-y-0 w-[250px] transition-all duration-300 bg-gradient-to-br from-[#F8F8F8] via-gray-400 via-55% to-btnColor z-50 overflow-y-auto max-h-screen shadow-2xl ${
+        className={`fixed right-0 inset-y-0 w-[90vw] max-w-[300px] transition-all duration-300 bg-white px-5 z-50 overflow-y-auto max-h-screen shadow-2xl ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -25,8 +25,8 @@ const Menu = () => {
           <Link className="flex items-center justify-center px-12 py-6">
             <LogoIcon />
           </Link>
-          <div className="  flex flex-col-reverse items-center py-11 justify-center gap-y-5  text-xl">
-            {NavLinks.map((link) => {
+          <div className="  flex flex-col-reverse items-center py-11 justify-center gap-1 text-xl w-full group">
+            {NavLinks.map((link, index) => {
               return (
                 <Kinder
                   key={link.id}
@@ -35,9 +35,14 @@ const Menu = () => {
                   offset={-65}
                   duration={500}
                   onClick={() => setOpen(!open)}
-                  className="bg-btnColor px-14 rounded-xl py-5 w-full text-center  text-white font-semibold  hover:bg-secTextColor transition-all duration-300 cursor-pointer"
+                  className="rounded-xl group/iocn py-4 w-full text-center  px-4 text-white font-semibold border-2 border-transparent hover:bg-gray-100 transition  cursor-pointer"
                 >
-                  <p>{link.title}</p>
+                  <div className="flex items-center flex-row-reverse justify-end gap-4 ">
+                    <p className="text-left text-secTextColor text-base">{link.title} </p>
+                    <span className="text-secTextColor group-hover/iocn:text-btnColor transition">
+                      {link.icon}
+                    </span>
+                  </div>
                 </Kinder>
               );
             })}
