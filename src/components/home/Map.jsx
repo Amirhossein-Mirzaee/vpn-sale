@@ -17,7 +17,10 @@ const Map = () => {
         <div className="lg:max-w-[1060px] xs:max-w-full  mx-auto py-28 ">
           <GlobalIcon />
         </div>
-        <div id="icons" className=" grid lg:grid-cols-5 md:grid-cols-3  xs:grid-cols-2 items-center justify-items-center gap-20 px-4">
+        <div
+          id="icons"
+          className=" grid lg:grid-cols-5 md:grid-cols-3  xs:grid-cols-2 items-center justify-items-center gap-20 px-4"
+        >
           {companyIcons.map((item) => (
             <div key={item.id} className="max-w-[200px]">
               <img src={item.src} alt={item.alt} className="w-full" />

@@ -46,7 +46,7 @@ const Footer = () => {
           <ul className="lg:flex flex-col text-left font-semibold gap-3.5 xs:hidden">
             <p className="text-[18px]">Engage</p>
             {engages.map((e) => (
-              <Link className="font-light text-secTextColor " key={e.id}>
+              <Link className="font-light text-secTextColor" key={e.id}>
                 {e.title}
               </Link>
             ))}

@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { NavLinks } from "../../assets/data/NavLinks";
-import { Link as Kinder } from "react-scroll";
 import { HamburgetMenuOpen, LogoIcon } from "../../assets/icons/icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Menu = () => {
   const [open, setOpen] = useState(false);
+
+  const location = useLocation();
+
+  console.log(location.hash);
 
   return (
     <div className="sm:visible md:block lg:hidden ">
@@ -26,16 +29,15 @@ const Menu = () => {
             <LogoIcon />
           </Link>
           <div className="  flex flex-col-reverse items-center py-11 justify-center gap-1 text-xl w-full group">
-            {NavLinks.map((link, index) => {
+            {NavLinks.map((link) => {
               return (
-                <Kinder
+                <a
                   key={link.id}
-                  to={link.link}
-                  smooth={true}
-                  offset={-65}
-                  duration={500}
+                  href={link.link}
                   onClick={() => setOpen(!open)}
-                  className="rounded-xl group/iocn py-4 w-full text-center  px-4 text-white font-semibold border-2 border-transparent hover:bg-gray-100 transition  cursor-pointer"
+                  className={`rounded-xl group/iocn py-4 w-full text-center  px-4 text-white font-semibold border-2 border-transparent hover:bg-gray-100 transition  cursor-pointer ${
+                    location.hash === link.link ? "bg-gray-100" : ""
+                  }`}
                 >
                   <div className="flex items-center flex-row-reverse justify-end gap-4 ">
                     <p className="text-left text-secTextColor text-base">{link.title} </p>
@@ -43,7 +45,7 @@ const Menu = () => {
                       {link.icon}
                     </span>
                   </div>
-                </Kinder>
+                </a>
               );
             })}
           </div>
