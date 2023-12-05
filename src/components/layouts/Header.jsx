@@ -3,11 +3,28 @@ import { LogoIcon } from "../../assets/icons/icons";
 import FirstCustomBtn from "../common/CustomBtn";
 import { Link } from "react-router-dom";
 import Menu from "../utils/HamburgerMenu";
+import { useState } from "react";
 
 const Header = () => {
+  const [bgColor, setBgColor] = useState("transparent");
+
+  const handleScroll = () => {
+    // Change the background color based on the scroll position
+    if (window.scrollY > 100) {
+      setBgColor("white"); // Set your desired background color
+    } else {
+      setBgColor("transparent"); // Reset to the initial background color
+    }
+  };
+  window.onscroll = handleScroll;
   return (
     <>
-      <div className={`flex md:justify-around xs:justify-between py-5 font-light xs:px-3 md:px-0 items-center lg:gap-16 sticky bg-[#f8f8f8] `}>
+      <div
+        onScroll={""}
+        className={`flex md:justify-around xs:justify-between py-5 font-light xs:px-3 md:px-0 items-center lg:gap-16 sticky  z-[100] top-0 transition-all duration-300 w-full`}
+        style={{ background: bgColor }}
+      >
+        
         <Link to="/">
           <LogoIcon />
         </Link>
